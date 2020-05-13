@@ -1,0 +1,77 @@
+<a href="home" class="btn btn-primary">Home</a>
+<a href="getResouce" class="btn btn-primary">Get Resorce </a>
+<a href="login" class="btn btn-primary">Logout</a>
+<div class="row" style="margin-left: 210px;">
+<div class="col-lg-8" >
+<h2 class="page-header"  style="text-align: center;">Add Resource</h2>
+<form (submit)="onRegisterSubmit()">	
+    <div>
+        <input type='text' placeholder=" " [(ngModel)]="empId" minlength="5" maxlength="10" name="empId"  required />
+        <label for="empId">Emp Id</label>
+    </div>
+
+    <div>
+      <input type='text' placeholder=" " [(ngModel)]="firstName" minlength="2" maxlength="20" name="firstName"  required/>
+      <label for="firstName"> First Name</label>
+    </div>
+
+    <div class="form-group">
+     <input type='text' placeholder=" " [(ngModel)]="lastName" minlength="2" maxlength="10" name="lastName"  required>
+     <label for="lastName">Last Name</label>
+    </div>
+
+    <div class="form-group">
+     <input type='email' placeholder=" "  pattern=".+@gmail.com" minlength="2" maxlength="25"  required [(ngModel)]="email" name="email" />
+     <label for="email">Email</label>
+     <div class="requirements"> Must be a valid email addres!</div>
+    </div>
+
+
+    <div>
+     <input type='tel' placeholder=" " [(ngModel)]="contact" minlength="10" maxlength="10" name="contact" pattern="^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$" required>
+     <label for="contact">Mobile Number</label>
+     <div class="requirements"> Must be a valid Phone Number!</div>
+    </div>
+
+    <div>
+     <input type='text' placeholder=" "  [(ngModel)]="grade" name="grade" minlength="1" maxlength="5" required>
+     <label for="grade">Grade</label>
+    </div>
+
+    <div>
+      <input type='password'placeholder=" " [(ngModel)]="password" minlength="4" maxlength="10" name="password"  required>
+      <label for="password">Password</label>
+      <div class="requirements"> Must be a valid password!</div>
+    </div>
+
+
+
+    <div>
+    <input type='text' placeholder=" " [(ngModel)]="projectName" minlength="2" maxlength="15" name="projectName"  required>
+    <label for="projectName">Project Name</label>
+    </div>
+
+    <div  class="form-group">
+    <input type='date' placeholder=" "  required [(ngModel)]="startDate" name="startDate" class="form-control" >
+    <label for="startDate" style="margin-left: 100px; margin-top: -11px;"> Project Start Date</label>
+   </div>
+
+    <div class="form-group">
+    <input type='date' placeholder=" " required [(ngModel)]="endDate" name="endDate" class="form-control" >
+    <label for="endDate" style="margin-left: 100px; margin-top: -11px;">Project End Date</label>
+    </div>
+
+
+
+   <div>
+    <input type='text' placeholder=" " required [(ngModel)]="technologies" minlength="3" maxlength="70" name="technologies">
+    <label for="technologies">Technologies</label>
+   </div>
+
+
+
+<input type="submit" class="btn btn-primary" value="submit">
+</form>
+</div>
+
+</div>
